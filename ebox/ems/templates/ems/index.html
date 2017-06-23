@@ -1,0 +1,10 @@
+<h1>{{ topic }}</h1>
+{% if terminal %}
+    <ul>
+    {% for a in terminal %}
+        <li><a href="/ems/{{ a.id }}/">{{ a.terminal_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
